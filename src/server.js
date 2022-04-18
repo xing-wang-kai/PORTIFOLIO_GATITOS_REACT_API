@@ -3,6 +3,11 @@ import 'dotenv/config';
 
 const port = process.env.PORT;
 
-app.listen(port, ()=>{
+let server =  app.listen(port, ()=>{
     console.log(`logado com sucesso em http://localhost:${port}`)
 })
+
+server.on('clientError', (err, socket) => {
+  console.error(err);
+  socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
+});
