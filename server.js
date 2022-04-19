@@ -1,4 +1,4 @@
-import app from './config/expressCustom.js';
+import app from './src/config/expressCustom.js';
 import 'dotenv/config';
 
 const port = process.env.PORT|| 3001;
