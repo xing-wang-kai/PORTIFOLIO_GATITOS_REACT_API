@@ -1,7 +1,7 @@
 import app from './config/expressCustom.js';
 import 'dotenv/config';
 
-const port = process.env.PORT;
+const port = process.env.PORT|| 3001;
 
 let server =  app.listen(port, ()=>{
     console.log(`logado com sucesso em http://localhost:${port}`)
