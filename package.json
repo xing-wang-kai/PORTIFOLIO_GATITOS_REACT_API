@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {"node": "17.x"}, 
+  "engines": {"node": "12.x"}, 
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
